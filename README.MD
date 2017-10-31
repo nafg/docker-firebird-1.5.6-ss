@@ -1,7 +1,6 @@
 # Firebird Dockerfile
 
-[![Docker Pulls](https://img.shields.io/docker/pulls/almeida/firebird.svg)](https://hub.docker.com/r/almeida/firebird/)
-[![Docker Stars](https://img.shields.io/docker/stars/almeida/firebird.svg)](https://hub.docker.com/r/almeida/firebird/)
+
 
 ## Description
 
