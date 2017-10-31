@@ -42,7 +42,7 @@ Firebird 1.5.6 SuperServer
 	$ docker exec -i -t firebird /bin/bash
 
     //backup
-    $ gbak -c -v -user SYSDBA -password masterkey localhost:/data/dbname.fdb /backup/dbname.fbk 
+    $ gbak -v -t -user SYSDBA -password masterkey localhost:/data/dbname.fdb /backup/dbname.fbk 
 
 	//restore 
 	$ gbak -c -v -user SYSDBA -password masterkey /backup/dbname.fbk localhost:/data/dbname.fdb
