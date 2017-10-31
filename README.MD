@@ -32,7 +32,7 @@ Firebird 1.5.6 SuperServer
 		-p 3050:3050 \
 		-v /somehostdir/firebird/backup/:/backup/ \
 		-v /somehostdir/firebird/data/:/data/ \
-		almeida/firebird
+		mladenp87/firebird1.5.6-ss
 
 ## Misc
 
@@ -44,5 +44,5 @@ Firebird 1.5.6 SuperServer
     //backup
     $ gbak -v -t -user SYSDBA -password masterkey localhost:/data/dbname.fdb /backup/dbname.fbk 
 
-	//restore 
+     //restore 
 	$ gbak -c -v -user SYSDBA -password masterkey /backup/dbname.fbk localhost:/data/dbname.fdb
