@@ -24,6 +24,9 @@ RUN dpkg --add-architecture i386 \
 
 ENV PATH $PATH:/opt/firebird/bin
 
+ADD librfunc.so /opt/firebird/UDF/librfunc.so
+RUN chmod +x /opt/firebird/UDF/librfunc.so
+
 VOLUME /data
 VOLUME /backup
 
