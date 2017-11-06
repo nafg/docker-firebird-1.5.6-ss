@@ -16,11 +16,7 @@ RUN dpkg --add-architecture i386 \
     && sed -i "237,238s/^/# /" scripts/postinstall.sh \
     && sed -i "238aNewPasswd=masterkey" scripts/postinstall.sh \
     && sh install.sh \
-    && rm -rf /usr/src/firebird \
-    && mkdir /backup/ \
-    && mkdir /data/ \
-    && chown firebird:firebird -R /backup/ \
-    && chown firebird:firebird -R /data/
+    && rm -rf /usr/src/firebird 
 
 ENV PATH $PATH:/opt/firebird/bin
 
