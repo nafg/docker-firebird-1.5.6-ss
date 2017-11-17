@@ -2,15 +2,10 @@ FROM debian:stretch
 MAINTAINER Mladen Petrovic <m.petrovic387@gmail.com>
 
 ENV DEBIAN_FRONTEND noninteractive
-ENV TZ Europe/Sarajevo
 
 RUN dpkg --add-architecture i386 \
-    && echo $TZ > /etc/timezone \
     && apt-get update \
-    && apt-get install -y apt-utils procps curl libc6:i386 libncurses5:i386 libstdc++5:i386 vim nano tzdate \
-    && rm /etc/localtime \
-    && ln -snf /usr/share/zoneinfo/$TZ /etc/localtime \
-    && dpkg-reconfigure -f noninteractive tzdata \
+    && apt-get install -y apt-utils procps curl libc6:i386 libncurses5:i386 libstdc++5:i386 vim nano \
     && curl -SL "http://downloads.sourceforge.net/project/firebird/firebird-linux-i386/1.5.6-Release/FirebirdSS-1.5.6.5026-0.nptl.i686.tar.gz" -o firebird.tar.gz \
     && mkdir -p /usr/src/firebird \
     && tar -xvf firebird.tar.gz -C /usr/src/firebird --strip-components=1 \
