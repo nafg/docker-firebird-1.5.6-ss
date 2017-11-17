@@ -5,7 +5,7 @@ ENV DEBIAN_FRONTEND noninteractive
 ENV TZ Europe/Sarajevo
 
 RUN dpkg --add-architecture i386 \
-    && echo $TZ > /etc/timezone && \
+    && echo $TZ > /etc/timezone \
     && apt-get update \
     && apt-get install -y apt-utils procps curl libc6:i386 libncurses5:i386 libstdc++5:i386 vim nano tzdate \
     && rm /etc/localtime \
