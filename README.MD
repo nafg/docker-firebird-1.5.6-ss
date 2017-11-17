@@ -1,3 +1,4 @@
+# Firebird Dockerfile
 
 ## Description
 
@@ -15,6 +16,12 @@ Firebird 1.5.6 SuperServer
 ### Exposed Ports
 
  * 3050
+
+### Env
+
+ * TZ // You can set timezone for your docker container via this variable, if not specified then its default value is "Etc/UTC"
+
+for example add "-e Europe/Sarajevo" to your docker run command.
 
 ### Firebird credentials
 

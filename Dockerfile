@@ -23,9 +23,12 @@ ENV PATH $PATH:/opt/firebird/bin
 ADD librfunc.so /opt/firebird/UDF/librfunc.so
 RUN chmod +x /opt/firebird/UDF/librfunc.so
 
+ADD run.sh /opt/firebird/run.sh
+RUN chmod +x /opt/firebird/run.sh
+
 VOLUME /data
 VOLUME /backup
 
 EXPOSE 3050/tcp
 
-CMD ["/opt/firebird/bin/fbguard"]
+ENTRYPOINT ["/opt/firebird/run.sh"]
