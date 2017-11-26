@@ -26,6 +26,9 @@ RUN chmod +x /opt/firebird/UDF/librfunc.so
 ADD run.sh /opt/firebird/run.sh
 RUN chmod +x /opt/firebird/run.sh
 
+VOLUME /data
+VOLUME /backup
+
 EXPOSE 3050/tcp
 
 ENTRYPOINT ["/opt/firebird/run.sh"]
